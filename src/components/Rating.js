@@ -6,9 +6,9 @@ import Stack from "@mui/material/Stack";
 import Ratingpercent from "./Ratingpercent";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import Singlerating from "./Singlerating";
-import shampoo from "../Assets/product 4 2.png";
-import shampoo2 from "../Assets/product 5 1.png";
-import shampoo3 from "../Assets/Product 6 1.png";
+import shampoo from "../Assets/yellow.png";
+import shampoo2 from "../Assets/pink.png";
+import shampoo3 from "../Assets/product 4 2.png";
 import ControlPointIcon from "@mui/icons-material/ControlPoint";
 const useStyles = makeStyles({
   container: {
@@ -126,11 +126,12 @@ const useStyles = makeStyles({
     margin: "20px",
   },
   ggbtn: {
-    backgroundColor: "#3D857E",
+    backgroundColor: "#044236",
     width: "144px",
     textTransform: "inherit",
     color: "white",
-    position: "relative"
+    position: "relative",
+    "&:hover": { backgroundColor: "#044236" },
   },
   products: {
     display: "flex",
@@ -152,14 +153,13 @@ const useStyles = makeStyles({
     width: "150px",
     height: "150px",
     display: "flex",
-    justifyContent: "center",
     alignItems: "center",
   },
   containers: {
     display: "flex",
     justifyContent: "space-between",
-    marginBottom: "100px"
-  }
+    marginBottom: "100px",
+  },
 });
 
 export default function Ratingpage() {
@@ -170,7 +170,9 @@ export default function Ratingpage() {
       <Box className={classes.container}>
         <Typography className={classes.offers}>Rating & Reviews</Typography>
         <Box className={classes.green}>
-          <EditIcon style={{ color: "#044236" ,fontSize: "17px",margin:"5px"}} />
+          <EditIcon
+            style={{ color: "#044236", fontSize: "17px", margin: "5px" }}
+          />
           <Typography className={classes.greenhead}>Review Product</Typography>
         </Box>
       </Box>
@@ -186,7 +188,7 @@ export default function Ratingpage() {
               defaultValue={4.5}
               precision={0.5}
               className={classes.stack}
-              style={{color:"#3D857E"}}
+              style={{ color: "#3D857E" }}
             />
           </Stack>
           <Typography className={classes.vsmall}>487 verified users</Typography>
@@ -293,7 +295,14 @@ export default function Ratingpage() {
           <Typography>₹450</Typography>
         </Box>
         <Box className={classes.products2}>
-          <ControlPointIcon style={{ fontSize: "40px" }} />
+          <ControlPointIcon
+            style={{
+              fontSize: "40px",
+              color: "#3D857E",
+              borderRadius: "50%",
+              backgroundColor: "#E7EEEE",
+            }}
+          />
         </Box>
         <Box>
           <Box className={classes.box2}>
@@ -316,7 +325,14 @@ export default function Ratingpage() {
           <Typography>₹450</Typography>
         </Box>
         <Box className={classes.products2}>
-          <ControlPointIcon style={{ fontSize: "40px" }} />
+          <ControlPointIcon
+            style={{
+              fontSize: "40px",
+              color: "#3D857E",
+              borderRadius: "50%",
+              backgroundColor: "#E7EEEE",
+            }}
+          />
         </Box>
         <Box>
           <Box className={classes.box2}>

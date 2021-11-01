@@ -6,7 +6,7 @@ import Fade from "@mui/material/Fade";
 import CloseIcon from "@mui/icons-material/Close";
 import CheckIcon from "@mui/icons-material/Check";
 import shampoo2 from "../Assets/shampoo2.png";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 const style = {
   position: "absolute",
   top: "50%",
@@ -100,6 +100,7 @@ const useStyles = makeStyles({
     textTransform: "inherit",
     margin: "5px",
     height: "48px",
+    "&:hover": { backgroundColor: "#044236" },
   },
   scrolltext: {
     color: " #004236FC",
@@ -116,10 +117,11 @@ const useStyles = makeStyles({
     width: "139px",
     textTransform: "inherit",
     color: "white",
+    "&:hover": { backgroundColor: "#044236" },
   },
   btnalign: {
     display: "flex",
-    marginTop: "25px",
+    marginTop: "14px",
   },
 
   fixbar: {
@@ -133,6 +135,7 @@ const useStyles = makeStyles({
   },
   moreicon: {
     margin: "15px",
+    color: "#044236",
   },
 });
 
@@ -153,14 +156,13 @@ export default function Fixedbar() {
           width: "100%",
           position: "fixed",
           zIndex: "7000",
-          marginTop: "20px",
         }}
       >
         <Box
           style={{
             backgroundColor: "#F8F3E9",
             zIndex: "2000",
-            height: "100px",
+            height: "80px",
           }}
           className={classes.bgcolor}
         >
@@ -211,7 +213,9 @@ export default function Fixedbar() {
                   <Button className={classes.transparent}>
                     Continue Shopping
                   </Button>
-                  <Button className={classes.coloured}>View Basket</Button>
+                  <Button variant="contained" className={classes.coloured}>
+                    View Basket
+                  </Button>
                 </Box>
               </Box>
             </Fade>
@@ -227,12 +231,12 @@ export default function Fixedbar() {
               <Button
                 className={classes.addbtn}
                 type="submit"
-                variant="outlined"
+                variant="contained"
                 onClick={handleOpen}
               >
                 Add to Bag
               </Button>
-              <ExpandMoreIcon className={classes.moreicon} />
+              <ArrowUpwardIcon className={classes.moreicon} />
             </Box>
           </Box>
         </Box>

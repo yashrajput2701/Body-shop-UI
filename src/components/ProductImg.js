@@ -95,6 +95,7 @@ fixedimg: {
     borderRadius: "4px",
     color: "white",
     textTransform: "inherit",
+    "&:hover": { backgroundColor: "#044236" },
   },
   align: {
     display: "flex",
@@ -119,7 +120,7 @@ export default function ProductImg() {
 
         <Box className={classes.align}>
           <img className={classes.heart} src={heart} alt="" />
-          <Button className={classes.primarybtn}>Notify me</Button>
+          <Button variant="contained" className={classes.primarybtn}>Notify me</Button>
         </Box>
       </Box>
 

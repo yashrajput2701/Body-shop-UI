@@ -187,7 +187,7 @@ export default function Footer() {
             className={classes.inputField}
             placeholder={"Email Address"}
           />
-          <Button type="submit" variant="outlined" className={classes.sendBtn}>
+          <Button type="submit" variant="contained" className={classes.sendBtn}>
             {"Send"}
           </Button>
         </form>

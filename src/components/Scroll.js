@@ -86,6 +86,7 @@ const useStyles = makeStyles({
     color: "white",
     height: "48px",
     marginTop: "15px",
+    "&:hover": { backgroundColor: "#044236" },
   },
 });
 
@@ -249,7 +250,7 @@ export default function Scroll() {
             ingredients, while making sure they’re having a positive impact on
             people and the planet.
           </Typography>
-          <Button className={classes.big}>Discover the tea tree range</Button>
+          <Button className={classes.big} variant="contained">Discover the tea tree range</Button>
           <Box component="div" className={classes.verticalLine} />
           <Rating />
         </Box>

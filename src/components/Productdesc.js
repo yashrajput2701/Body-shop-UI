@@ -1,11 +1,14 @@
-import React from "react";
-import { makeStyles, Box, Typography, Button } from "@material-ui/core";
+import React, { useEffect, useState } from "react";
+import { makeStyles, Box, Typography} from "@material-ui/core";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import background from "../Assets/Vector (2)new.png";
 import shampoo2 from "../Assets/Vectornew.png";
 import heart from "../Assets/Vector (1)new.png";
 import Scroll from "./Scroll";
+import axios from "axios";
+import ToggleButton from "@mui/material/ToggleButton";
+import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 // import Footer from "./Footer";
 // import Contactpage from "./Contactpage";
 const useStyles = makeStyles({
@@ -83,8 +86,8 @@ const useStyles = makeStyles({
   },
   sizes2: {
     display: "flex",
-    marginLeft: "25px",
-    marginRight: "25px",
+    marginLeft: "30px",
+    marginRight: "30px",
   },
   sizebtn: {
     border: "1px gray solid",
@@ -103,12 +106,30 @@ const useStyles = makeStyles({
   },
   small: {
     fontSize: "14px",
-  }
+  },
 });
 
 export default function Productdesc() {
   const classes = useStyles();
+  const [alignment, setAlignment] = React.useState("400");
 
+  const handleChange = (event, newAlignment) => {
+    setAlignment(newAlignment);
+  };
+  // const getdata = async () => {
+  //   try {
+  //     const response = await axios.get("http://52.140.80.7:3002/api/v1/category/list?limit=1&page=10&all=1");
+  //     console.log(response);
+  //     setData(response.data.results);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+  // useEffect(() => {
+  //   getdata();
+  // }, []);
+  // const [data, setData] = useState([]);
+  // const Card = ({ cardapi }) => {
   return (
     <>
       <Box className={classes.container}>
@@ -126,7 +147,7 @@ export default function Productdesc() {
         </Box>
         <Box className={classes.star}>
           <Stack spacing={1}>
-            <Rating name="half-rating" defaultValue={4.5} precision={0.5} />
+            <Rating name="half-rating" defaultValue={4.5} precision={0.5} style={{ color: "#3D857E" }}/>
           </Stack>
           <Typography className={classes.star1}>4.5/5</Typography>
           <Typography className={classes.star2}>(487)</Typography>
@@ -150,55 +171,83 @@ export default function Productdesc() {
         </Box>
         <Box component="div" className={classes.verticalLine} />
         <Typography className={classes.black}>Select Size</Typography>
+        <ToggleButtonGroup
+          color="success"
+          value={alignment}
+          exclusive
+          onChange={handleChange}
+        >
+          <ToggleButton
+            className={classes.sizebtn}
+            style={{ margin: "5px", border: "1px solid", borderRadius: "4px" }}
+            value="100"
+          >
+            100 ml
+          </ToggleButton>
+          <ToggleButton
+            className={classes.sizebtn}
+            style={{ margin: "5px", border: "1px solid", borderRadius: "4px" }}
+            value="200"
+          >
+            200 ml
+          </ToggleButton>
+          <ToggleButton
+            className={classes.sizebtn}
+            style={{ margin: "5px", border: "1px solid", borderRadius: "4px" }}
+            value="400"
+          >
+            400 ml
+          </ToggleButton>
+          <ToggleButton
+            className={classes.sizebtn}
+            style={{ margin: "5px", border: "1px solid", borderRadius: "4px" }}
+            value="600"
+          >
+            600 ml
+          </ToggleButton>
+          <ToggleButton
+            className={classes.sizebtn}
+            style={{ margin: "5px", border: "1px solid", borderRadius: "4px" }}
+            value="800"
+          >
+            800 ml
+          </ToggleButton>
+        </ToggleButtonGroup>
         <Box className={classes.sizes}>
-          <Box>
-            <Button className={classes.sizebtn}>100 ml</Button>
-            <Typography className={classes.sizes2}>₹299</Typography>
-          </Box>
-          <Box>
-            <Button className={classes.sizebtn}>200 ml</Button>
-            <Typography className={classes.sizes2}>₹399</Typography>
-          </Box>
-          <Box>
-            <Button className={classes.sizebtn}>400 ml</Button>
-            <Typography className={classes.sizes2}>₹499</Typography>
-          </Box>
-          <Box>
-            <Button className={classes.sizebtn}>600 ml</Button>
-            <Typography className={classes.sizes2}>₹599</Typography>
-          </Box>
-          <Box>
-            <Button className={classes.sizebtn}>800 ml</Button>
-            <Typography className={classes.sizes2}>₹699</Typography>
-          </Box>
+          <Typography className={classes.sizes2}>₹299</Typography>
+
+          <Typography className={classes.sizes2}>₹399</Typography>
+
+          <Typography className={classes.sizes2}>₹499</Typography>
+
+          <Typography className={classes.sizes2}>₹599</Typography>
+
+          <Typography className={classes.sizes2}>₹699</Typography>
         </Box>
         <Box component="div" className={classes.verticalLine} />
         <Box className={classes.sizesimg}>
           <Box className={classes.images}>
             <img src={shampoo2} alt="" />
-            <Typography className={classes.small}>
-              100 % Vegan
-            </Typography>
+            <Typography className={classes.small}>100 % Vegan</Typography>
           </Box>
           <Box className={classes.images}>
             <img src={heart} alt="" />
-            <Typography className={classes.small}>
-              Cruelty Free
-            </Typography>
+            <Typography className={classes.small}>Cruelty Free</Typography>
           </Box>
           <Box className={classes.images}>
             <img src={background} alt="" />
-            <Typography className={classes.small}>
-              Easy Return
-            </Typography>
+            <Typography className={classes.small}>Easy Return</Typography>
           </Box>
         </Box>
         <Box component="div" className={classes.verticalLine} />
         <Scroll />
-   
       </Box>
       {/* <Contactpage />
         <Footer /> */}
     </>
   );
 }
+// return(<Box>
+
+// </Box>)
+// }
