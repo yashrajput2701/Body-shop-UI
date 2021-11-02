@@ -1,12 +1,16 @@
-import './App.css';
-import Navbar from "./components/Navbar";
-import Product from "./components/Product";
+import "./App.css";
+import Mainpage from "./components/Mainpage";
+// import Footer from "./components/Footer";
+// import Contactpage from "./components/Contactpage";
+// import Recommended from "./components/Recommended";
 function App() {
   return (
     <>
-    <Navbar />
-    <Product />
-
+      <Mainpage />
+      {/* <Recommended />
+      <Contactpage />
+      <Footer /> */}
+  
     </>
   );
 }

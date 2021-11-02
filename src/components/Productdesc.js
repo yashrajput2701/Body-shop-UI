@@ -9,8 +9,6 @@ import Scroll from "./Scroll";
 import axios from "axios";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
-// import Footer from "./Footer";
-// import Contactpage from "./Contactpage";
 const useStyles = makeStyles({
   container: {
     position: "absolute",
@@ -242,8 +240,7 @@ export default function Productdesc() {
         <Box component="div" className={classes.verticalLine} />
         <Scroll />
       </Box>
-      {/* <Contactpage />
-        <Footer /> */}
+      
     </>
   );
 }
