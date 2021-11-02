@@ -10,13 +10,22 @@ import axios from "axios";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 const useStyles = makeStyles({
+  
   container: {
-    position: "absolute",
-    left: "880px",
-    top: "275px",
-    height: "680px",
-    width: "805px",
+    flexBasis: "50%",
+    position: "sticky",
+    top: "250px",
+    height: "auto",
+    width: "605px",
     background: "white",
+    overflowY: 'auto',
+    "& ::-webkit-scrollbar-thumb": {
+      background: 'rgba(90, 90, 90)',
+    },
+    "&::-webkit-scrollbar": {
+      width: '0px',
+      height: '0px',
+    },
   },
   price: {
     display: "flex",

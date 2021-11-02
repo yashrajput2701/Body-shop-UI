@@ -24,9 +24,9 @@ export default function Product() {
         <ProductImg />
         <Productdesc />
       </div>
-      {/* <Recommended />
+      <Recommended />
       <Contactpage />
-      <Footer /> */}
+      <Footer />
       <Fixedbar />
     </>
   );

@@ -19,16 +19,17 @@ import vector4 from "../Assets/Vector (4).png";
 const useStyles = makeStyles({
   container: {
     boxSizing: "border-box",
-    position: "fixed",
+    position: "sticky",
     color: "white",
     padding: "0",
+    top: "0"
   },
 
   navbarContainer: {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-around",
-    position: "absolute",
+    // position: "absolute",
     width: "100%",
     height: "78px",
     left: "0",
@@ -50,10 +51,10 @@ const useStyles = makeStyles({
     margin: "25px",
   },
   navbarContainer2: {
-    position: "absolute",
+    // position: "absolute",
     width: "100%",
     height: "60px",
-    top: "78px",
+    // top: "78px",
     background: "#FFFFFF",
     boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.06)",
     display: "flex",
@@ -87,16 +88,16 @@ const useStyles = makeStyles({
     width: "130px",
   },
   navbarContainer3: {
-    position: "absolute",
+    // position: "absolute",
     height: "44px",
     width: "100%",
-    top: "137px",
+    // top: "137px",
     background: "#D6CE4B",
   },
 
   dotted: {
-    position: "absolute",
-    width: "98%",
+    // position: "absolute",
+    width: "99%",
     height: "30px",
     background: "#D6CE4B",
     border: "1px dashed #000000",

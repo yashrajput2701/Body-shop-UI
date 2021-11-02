@@ -93,6 +93,7 @@ const useStyles = makeStyles({
     textTransform: "uppercase",
     fontSize: "15px",
     marginTop:"30px",
+    marginBottom: "95px"
   },
   white :{
 color: "white",

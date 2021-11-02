@@ -4,86 +4,74 @@ import background from "../Assets/shampoo.png";
 import shampoo2 from "../Assets/shampoo2.png";
 import heart from "../Assets/Vector (2).png";
 const useStyles = makeStyles({
-  main: {
-    display: "flex",
-    justifyContent: "center",
-    flexbasis: "50%",
-    maxWidth: "50%",
-    position: "fixed",
-    top: "270px",
-  },
   wrapper: {
-    position: "fixed",
-    top: "230px",
-    left: "134px",
+    // position: "fixed",
+    // top: "230px",
+    // left: "134px",
+    flexBasis: "40%",
+    maxWidth: "40%",
+    minWidth: "20%",
+    position: "sticky",
+    // position: "-webkit-sticky",
+    zindex: "999!important",
+    // msOverflowY: "auto",
+    height: "600px",
+    Top: "500px",
+  },
+  images: {
+    display: "flex",
   },
   container: {
-    position: "fixed",
     width: "476px",
     height: "476px",
-    left: "135px",
-    top: "265px",
     background: "#F8F3E9",
     borderRadius: "8px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    margin: "10px",
   },
-  fixedimg: {
-    position: "fixed",
-    top: "265px",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
+
   container2: {
-    position: "fixed",
     width: "99px",
     height: "99px",
-    left: "631px",
-    top: "265px",
     background: "#F8F3E9",
     borderRadius: "4px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    margin: "15px",
   },
   container3: {
-    position: "fixed",
     width: "99px",
     height: "99px",
-    left: "631px",
-    top: "370px",
     background: "#F8F3E9",
     borderRadius: "4px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    margin: "15px",
   },
   container4: {
-    position: "fixed",
     width: "99px",
     height: "99px",
-    left: "631px",
-    top: "475px",
     background: "#F8F3E9",
     borderRadius: "4px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    margin: "15px",
   },
   container5: {
-    position: "fixed",
     width: "99px",
     height: "99px",
-    left: "631px",
-    top: "580px",
-    padding:"15px",
+    padding: "15px",
     background: "#F8F3E9",
     borderRadius: "4px",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    margin: "15px",
   },
 
   heart: {
@@ -108,30 +96,16 @@ const useStyles = makeStyles({
   align: {
     display: "flex",
     justifyContent: "space-between",
-    position: "fixed",
     height: "50px",
     width: "480px",
-    left: "130px",
-    top: "755px",
+    marginTop: "20px",
   },
-  containert: {
-    position: "fixed",
-    height: "16px",
-    left: "32px",
-    top: "209px",
-    fontWeight: "500",
-    fontSize: "14px",
-    lineHeight: "16px",
-    display: "flex",
-    justifyContent: "center",
-  },
-
   text: {
     color: "gray",
   },
   straight: {
-    display: "flex"
-  }
+    display: "flex",
+  },
 });
 
 export default function ProductImg() {
@@ -145,18 +119,9 @@ export default function ProductImg() {
           </Typography>
           <Typography>Satsuma Shower Gel</Typography>
         </Box>
-        <Box className={classes.main}>
-          <Box className={classes.fixedimg}>
-            <Box className={classes.container}>
-              <img className={classes.shampooimg} src={background} alt="" />
-            </Box>
-
-            <Box className={classes.align}>
-              <img className={classes.heart} src={heart} alt="" />
-              <Button variant="contained" className={classes.primarybtn}>
-                Notify me
-              </Button>
-            </Box>
+        <div className={classes.images}>
+          <Box className={classes.container}>
+            <img className={classes.shampooimg} src={background} alt="" />
           </Box>
           <Box>
             <Box className={classes.container2}>
@@ -172,6 +137,12 @@ export default function ProductImg() {
               <img src={shampoo2} alt="" />
             </Box>
           </Box>
+        </div>
+        <Box className={classes.align}>
+          <img className={classes.heart} src={heart} alt="" />
+          <Button variant="contained" className={classes.primarybtn}>
+            Notify me
+          </Button>
         </Box>
       </div>
     </>

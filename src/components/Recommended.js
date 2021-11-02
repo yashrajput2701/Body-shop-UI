@@ -1,9 +1,4 @@
-import {
-  Box,
-  makeStyles,
-  Typography,
-  Button,
-} from "@material-ui/core";
+import { Box, makeStyles, Typography, Button } from "@material-ui/core";
 import shampoo from "../Assets/product.png";
 import shampoo2 from "../Assets/gg3.png";
 import shampoo3 from "../Assets/gg1.png";
@@ -18,7 +13,7 @@ const useStyles = makeStyles({
   mainContainer: {
     width: "100%",
     margin: "0 auto",
-    height: "619px",
+    height: "579px",
   },
   mainhead: {
     display: "flex",
@@ -28,7 +23,7 @@ const useStyles = makeStyles({
     fontWeight: "700",
     fontSize: "24px",
     padding: "10px",
-    marginLeft: "145px"
+    marginLeft: "145px",
   },
   section: {
     display: "flex",
@@ -43,7 +38,7 @@ const useStyles = makeStyles({
     alignItems: "center",
   },
   anti: {
-    width: "104px",
+    width: "164px",
     fontWeight: "700",
     fontSize: "15px",
   },
@@ -143,7 +138,7 @@ export default function Recommended() {
             <img src={shampoo2} alt="" />
           </Box>
           <Typography className={classes.anti}>
-            Anti-Dandruff Shampoo
+            Fuji Green Tea Shower Gel
           </Typography>
           <Box className={classes.rateline}>
             <Box className={classes.rate}>
@@ -170,9 +165,7 @@ export default function Recommended() {
           <Box className={classes.box2}>
             <img src={shampoo3} alt="" />
           </Box>
-          <Typography className={classes.anti}>
-            Anti-Dandruff Shampoo
-          </Typography>
+          <Typography className={classes.anti}>Coconut Shower Cream</Typography>
           <Box className={classes.rateline}>
             <Box className={classes.rate}>
               <Stack spacing={1}>
@@ -199,7 +192,7 @@ export default function Recommended() {
             <img src={shampoo4} alt="" />
           </Box>
           <Typography className={classes.anti}>
-            Anti-Dandruff Shampoo
+            Pink Grape Fruit Shower Gel
           </Typography>
           <Box className={classes.rateline}>
             <Box className={classes.rate}>
@@ -227,7 +220,7 @@ export default function Recommended() {
             <img src={shampoo5} alt="" />
           </Box>
           <Typography className={classes.anti}>
-            Anti-Dandruff Shampoo
+            Fuji Green Tea Shower Gel
           </Typography>
           <Box className={classes.rateline}>
             <Box className={classes.rate}>
@@ -254,9 +247,7 @@ export default function Recommended() {
           <Box className={classes.box2}>
             <img src={shampoo6} alt="" />
           </Box>
-          <Typography className={classes.anti}>
-            Anti-Dandruff Shampoo
-          </Typography>
+          <Typography className={classes.anti}>Coconut Shower Cream</Typography>
           <Box className={classes.rateline}>
             <Box className={classes.rate}>
               <Stack spacing={1}>
