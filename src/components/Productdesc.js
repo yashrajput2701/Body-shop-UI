@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   container: {
     flexBasis: "50%",
     position: "sticky",
-    top: "250px",
+    top: "280px",
     height: "auto",
     width: "605px",
     background: "white",

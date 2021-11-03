@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     zindex: "999!important",
     // msOverflowY: "auto",
     height: "600px",
-    Top: "500px",
+    top: "250px",
   },
   images: {
     display: "flex",
