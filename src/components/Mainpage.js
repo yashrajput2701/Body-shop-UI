@@ -11,6 +11,7 @@ const useStyles = makeStyles({
   wrapper: {
     display: "flex",
     justifyContent: "center",
+    
   },
 });
 

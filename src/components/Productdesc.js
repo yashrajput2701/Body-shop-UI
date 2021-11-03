@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     position: "sticky",
     top: "280px",
     height: "auto",
-    width: "605px",
+    width: "auto",
     background: "white",
     overflowY: 'auto',
     "& ::-webkit-scrollbar-thumb": {
@@ -29,9 +29,14 @@ const useStyles = makeStyles({
   },
   price: {
     display: "flex",
-    justifyContent: "space-between",
+    // justifyContent: "space-between",
   },
   size: {
+    fontSize: "38px",
+    fontWeight: "700",
+    marginLeft: "200px",
+  },
+  sizeb: {
     fontSize: "38px",
     fontWeight: "700",
   },
@@ -141,7 +146,7 @@ export default function Productdesc() {
     <>
       <Box className={classes.container}>
         <Box className={classes.price}>
-          <Typography className={classes.size}>Satsuma Shower Gel</Typography>
+          <Typography className={classes.sizeb}>Satsuma Shower Gel</Typography>
           <Typography className={classes.size}>₹ 499</Typography>
         </Box>
         <Box className={classes.price}>
