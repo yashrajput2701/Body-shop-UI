@@ -19,6 +19,9 @@ const useStyles = makeStyles({
     width: "auto",
     background: "white",
     overflowY: 'auto',
+    // flexBasis: "40%",
+    // maxWidth: "60%",
+    // minWidth: "20%",
     "& ::-webkit-scrollbar-thumb": {
       background: 'rgba(90, 90, 90)',
     },
@@ -153,9 +156,9 @@ export default function Productdesc() {
           <Typography className={classes.size2}>
             For all skin type • Vagen
           </Typography>
-          <Typography className={classes.size2}>
+          {/* <Typography className={classes.size2}>
             Inclusive of all tax
-          </Typography>
+          </Typography> */}
         </Box>
         <Box className={classes.star}>
           <Stack spacing={1}>
@@ -184,7 +187,6 @@ export default function Productdesc() {
         <Box component="div" className={classes.verticalLine} />
         <Typography className={classes.black}>Select Size</Typography>
         <ToggleButtonGroup
-          color="success"
           value={alignment}
           exclusive
           onChange={handleChange}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import LinearProgress from '@mui/material/LinearProgress';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 function LinearProgressWithLabel(props) {
   return (
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -27,9 +27,16 @@ LinearProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
+
 export default function LinearWithValueLabel() {
   const [progress, setProgress] = React.useState(10);
-
+  const theme = createTheme({
+    palette: {
+       secondary: {
+           main: '#3D857E'
+       }
+    }
+  });
   React.useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prevProgress) => (prevProgress >= 100 ? 10 : prevProgress + 10));
@@ -42,11 +49,18 @@ export default function LinearWithValueLabel() {
   return (
     <Box sx={{ width: '50%',padding: "40px" }} >
         <Typography>Performance</Typography>
-      <LinearProgressWithLabel value={82} color="success"/>
+        <ThemeProvider theme={theme}>
+      <LinearProgressWithLabel value={82} color="secondary"/>
+      </ThemeProvider>
+
       <Typography>Quality</Typography>
-      <LinearProgressWithLabel value={90} color="success"/>
+      <ThemeProvider theme={theme}>
+      <LinearProgressWithLabel value={90} color="secondary"/>
+      </ThemeProvider>
       <Typography>Value</Typography>
-      <LinearProgressWithLabel value={79} color="success"/>
+      <ThemeProvider theme={theme}>
+      <LinearProgressWithLabel value={79} color="secondary"/>
+      </ThemeProvider>
     </Box>
   );
 }

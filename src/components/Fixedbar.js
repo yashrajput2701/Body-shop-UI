@@ -122,6 +122,7 @@ const useStyles = makeStyles({
   btnalign: {
     display: "flex",
     marginTop: "14px",
+    paddingRight: "250px"
   },
 
   fixbar: {
@@ -130,13 +131,16 @@ const useStyles = makeStyles({
   },
   fixed: {
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
     alignItems: "center",
   },
   moreicon: {
     margin: "15px",
     color: "#044236",
   },
+  accordion: {
+    paddingLeft: "250px"
+  }
 });
 
 export default function Fixedbar() {

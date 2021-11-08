@@ -1,11 +1,11 @@
 import React from "react";
 import { makeStyles, Box, Typography } from "@material-ui/core";
 import pen from "../Assets/pen.png";
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme =>({
   container: {
     border: "1px #D2D2D2 solid",
     width: "575px",
-    height: "113px",
+    height: "auto",
     borderRadius: "4px",
     marginTop: "15px",
     marginBottom: "40px",
@@ -34,7 +34,7 @@ const useStyles = makeStyles({
     paddingLeft: "15px",
     paddingTop: "5px",
   },
-});
+}));
 
 export default function Offers() {
   const classes = useStyles();

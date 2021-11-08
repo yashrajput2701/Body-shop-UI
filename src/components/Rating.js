@@ -67,7 +67,7 @@ const useStyles = makeStyles({
   horizontalLine: {
     width: "100%",
     height: "1px",
-    backgroundColor: "	#F2F2F2",
+    backgroundColor: "#F2F2F2",
     marginBottom: "25px",
     marginTop: "25px",
   },
@@ -102,17 +102,23 @@ const useStyles = makeStyles({
   description: {
     display: "flex",
     justifyContent: "space-between",
-    width: "350px",
+    width: "450px",
   },
   lorem2: {
     fontSize: "16px",
     fontWeight: "400",
     color: "gray",
   },
+  lorem22: {
+    fontSize: "16px",
+    fontWeight: "400",
+    color: "gray",
+    width: "140px",
+  },
   rate: {
     display: "flex",
     width: "200px",
-    justifyContent: "flex-start",
+    // justifyContent: "flex-start",
   },
   rateline: {
     display: "flex",
@@ -225,24 +231,24 @@ export default function Ratingpage() {
       </Typography>
       <Box component="div" className={classes.horizontalLine} />
       <Box className={classes.description}>
-        <Typography className={classes.lorem2}>Skin Concern</Typography>
+        <Typography className={classes.lorem22}>Skin Concern</Typography>
         <Typography className={classes.lorem2}>:</Typography>
-        <Typography className={classes.lorem2}>Sensitive</Typography>
+        <Typography className={classes.lorem22}>Sensitive</Typography>
       </Box>
       <Box className={classes.description}>
-        <Typography className={classes.lorem2}>Age</Typography>
+        <Typography className={classes.lorem22}>Age</Typography>
         <Typography className={classes.lorem2}>:</Typography>
-        <Typography className={classes.lorem2}>Below 16</Typography>
+        <Typography className={classes.lorem22}>Below 16</Typography>
       </Box>
       <Box className={classes.description}>
-        <Typography className={classes.lorem2}>Time using product</Typography>
+        <Typography className={classes.lorem22}>Time using product</Typography>
         <Typography className={classes.lorem2}>:</Typography>
-        <Typography className={classes.lorem2}>1+ month(s)</Typography>
+        <Typography className={classes.lorem22}>1+ month(s)</Typography>
       </Box>
       <Box className={classes.description}>
-        <Typography className={classes.lorem2}>Post date</Typography>
+        <Typography className={classes.lorem22}>Post date</Typography>
         <Typography className={classes.lorem2}>:</Typography>
-        <Typography className={classes.lorem2}>April 2021</Typography>
+        <Typography className={classes.lorem22}>April 2021</Typography>
       </Box>
       <Box component="div" className={classes.horizontalLine} />
 

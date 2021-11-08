@@ -22,7 +22,8 @@ const useStyles = makeStyles({
     position: "sticky",
     color: "white",
     padding: "0",
-    top: "0"
+    top: "0",
+    width: "100%"
   },
 
   navbarContainer: {
@@ -32,8 +33,8 @@ const useStyles = makeStyles({
     // position: "absolute",
     width: "100%",
     height: "78px",
-    left: "0",
-    top: "0",
+    // left: "0",
+    // top: "0",
     background: "#004236",
   },
 

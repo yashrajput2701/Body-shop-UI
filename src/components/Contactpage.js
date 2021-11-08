@@ -14,14 +14,17 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   mainContainer: {
     width: "100%",
     margin: "0 auto",
     backgroundColor: " #F9F6EE",
-    height: "164px",
+    height: "auto",
     display: "flex",
     justifyContent: "center",
+    [theme.breakpoints.down("sm")]:{
+      flexDirection: "column"
+    }
   },
   boxdesc: {
     textAlign: "center",
@@ -70,7 +73,7 @@ const useStyles = makeStyles({
     marginTop: "25px",
     marginBottom: "25px",
   },
-});
+}));
 
 export default function Contactpage() {
   const classes = useStyles();

@@ -7,13 +7,17 @@ import Productdesc from "./Productdesc";
 import Footer from "./Footer";
 import Contactpage from "./Contactpage";
 import Recommended from "./Recommended";
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   wrapper: {
+    height: "100%",
     display: "flex",
     justifyContent: "center",
+    [theme.breakpoints.down("sm")]:{
+      flexDirection: "column"
+    }
     
   },
-});
+}));
 
 export default function Product() {
   const classes = useStyles();

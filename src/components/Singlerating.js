@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import LinearProgress from '@mui/material/LinearProgress';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 function LinearProgressWithLabel(props) {
   return (
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -29,7 +29,13 @@ LinearProgressWithLabel.propTypes = {
 
 export default function LinearWithValueLabel() {
   const [progress, setProgress] = React.useState(10);
-
+  const theme = createTheme({
+    palette: {
+       secondary: {
+           main: '#3D857E'
+       }
+    }
+  });
   React.useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prevProgress) => (prevProgress >= 100 ? 10 : prevProgress + 10));
@@ -42,7 +48,9 @@ export default function LinearWithValueLabel() {
   return (
     <Box sx={{ width: '20%'}} >
         
-      <LinearProgressWithLabel value={82} color="success"/>
+        <ThemeProvider theme={theme}>
+      <LinearProgressWithLabel value={90} color="secondary"/>
+      </ThemeProvider>
     </Box>
   );
 }

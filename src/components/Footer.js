@@ -33,7 +33,7 @@ const useStyles = makeStyles({
 
   listItem: {
     color: "#fff",
-    fontSize: "18px"
+    fontSize: "18px",
   },
 
   lowerContainer: {
@@ -73,6 +73,8 @@ const useStyles = makeStyles({
     fontWeight: "bold",
     letterSpacing: "1px",
     fontSize: "17px",
+    borderRadius: "0",
+    "&:hover": { backgroundColor: "yellow" },
   },
 
   copyrightContainer: {
@@ -85,21 +87,20 @@ const useStyles = makeStyles({
   copyrightIcon: {
     color: "#fff",
     marginRight: "5px",
-    marginTop:"30px",
+    marginTop: "30px",
   },
 
   copyrightText: {
     color: "#fff",
     textTransform: "uppercase",
     fontSize: "15px",
-    marginTop:"30px",
-    marginBottom: "95px"
+    marginTop: "30px",
+    marginBottom: "95px",
   },
-  white :{
-color: "white",
-marginBottom: "15px",
-
-  }
+  white: {
+    color: "white",
+    marginBottom: "15px",
+  },
 });
 
 export default function Footer() {

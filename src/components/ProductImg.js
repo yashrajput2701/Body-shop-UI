@@ -5,16 +5,11 @@ import shampoo2 from "../Assets/shampoo2.png";
 import heart from "../Assets/Vector (2).png";
 const useStyles = makeStyles({
   wrapper: {
-    // position: "fixed",
-    // top: "230px",
-    // left: "134px",
     flexBasis: "40%",
-    maxWidth: "40%",
-    minWidth: "20%",
+    // maxWidth: "60%",
+    // minWidth: "40%",
     position: "sticky",
-    // position: "-webkit-sticky",
     zindex: "999!important",
-    // msOverflowY: "auto",
     height: "600px",
     top: "250px",
   },

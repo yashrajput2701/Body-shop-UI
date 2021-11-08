@@ -9,11 +9,13 @@ import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   mainContainer: {
     width: "100%",
     margin: "0 auto",
-    height: "579px",
+    height: "auto",
+    marginBottom: "100px"
+   
   },
   mainhead: {
     display: "flex",
@@ -28,6 +30,9 @@ const useStyles = makeStyles({
   section: {
     display: "flex",
     justifyContent: "space-around",
+    [theme.breakpoints.down("sm")]:{
+      flexDirection: "column"
+    }
   },
   box2: {
     width: "170px",
@@ -83,7 +88,7 @@ const useStyles = makeStyles({
     alignItems: "center",
     marginTop: "150px",
   },
-});
+}));
 
 export default function Recommended() {
   const classes = useStyles();
