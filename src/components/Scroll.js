@@ -24,8 +24,7 @@ const useStyles = makeStyles({
     width: "100%",
   },
   scrolldetails: {
-    width: "800px",
-    position: "relative",
+    width: "auto",
   },
 
   offers: {

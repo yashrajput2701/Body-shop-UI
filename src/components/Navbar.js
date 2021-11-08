@@ -36,6 +36,7 @@ const useStyles = makeStyles({
     // left: "0",
     // top: "0",
     background: "#004236",
+    boxSizing: "border-box",
   },
 
   store: {
@@ -60,6 +61,8 @@ const useStyles = makeStyles({
     boxShadow: "0px 0px 30px rgba(0, 0, 0, 0.06)",
     display: "flex",
     justifyContent: "center",
+    overflowX: "auto",
+    boxSizing: "border-box",
   },
   listContainer: {
     display: "flex",
@@ -67,7 +70,7 @@ const useStyles = makeStyles({
   },
 
   listItem: {
-    margin: "10px",
+    // margin: "10px",
   },
 
   link: {
